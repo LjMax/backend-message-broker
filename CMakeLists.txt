@@ -27,5 +27,5 @@ add_executable(MessageBrokerClientTest tests/MessageBrokerClientTest.cpp
 target_link_libraries(MessageBrokerClientTest ${GTEST_BOTH_LIBRARIES} gmock qpid-proton-cpp sqlite3 pthread)
 
 # Add the test to CTest
-add_test(BrokerTest MessageBrokerClientTest COMMAND MessageBrokerClientTest)
+add_test(MessageBrokerTest MessageBrokerClientTest COMMAND MessageBrokerClientTest)
 

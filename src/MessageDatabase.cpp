@@ -47,9 +47,11 @@ std::string MessageDatabase::retrieveMessage(int messageId) {
 }
 
 void MessageDatabase::initializeDatabase() {
+
     std::string sql = "CREATE TABLE IF NOT EXISTS messages ("
                       "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                       "content TEXT);";
+
     char* errMsg = nullptr;
     if (sqlite3_exec(db, sql.c_str(), nullptr, nullptr, &errMsg) != SQLITE_OK) {
         std::cerr << "Error initializing database: " << errMsg << std::endl;

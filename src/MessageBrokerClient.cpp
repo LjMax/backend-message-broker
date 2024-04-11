@@ -71,7 +71,6 @@ void MessageBrokerClient::wait_for_message_received() {
     message_received_cond_.wait(lock, [this] { return message_received_; });
 }
 
-// Method to reset the message received flag
 void MessageBrokerClient::reset_message_received() {
     std::lock_guard<std::mutex> lock(message_received_mutex_);
     message_received_ = false;

@@ -11,8 +11,6 @@
 #include <mutex>
 #include <condition_variable>
 
-class MessageBrokerClientTest;
-
 class MessageBrokerClient : public proton::messaging_handler, public IMessageBroker {
 
 public:
@@ -30,7 +28,7 @@ public:
     void wait_for_sender() override;
 
     void wait_for_message_received();
-    void reset_message_received();
+    void reset_message_received(); // Method to reset the message received flag
 
 protected:
     void on_container_start(proton::container& container) override;
