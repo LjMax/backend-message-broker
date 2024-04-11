@@ -20,9 +20,9 @@ To build the project, follow these steps:
 
 1. Clone the repository:
    
-   `git clone https://github.com/yourusername/message-broker-client.git`
+   `git clone https://github.com/LjMax/backend-message-broker.git`
    
-   `cd message-broker-client`
+   `cd backend-message-broker`
 
 3. Create a build directory and navigate to it:
 
