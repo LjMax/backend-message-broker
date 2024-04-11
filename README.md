@@ -50,15 +50,16 @@ For this example [Apache ActiveMQ (version 5.18.3)](https://activemq.apache.org/
 
 # Running Tests
 
-If you have Google Test and Google Mock installed, you can build and run the tests using the following commands:
+If you have Google Test and Google Mock installed, the test will be built with the main application.
 
-1. Build the tests:
 
-   `make MessageBrokerClientTest`
-
-2. Run the tests:
+* Run the tests:
 
    `./MessageBrokerClientTest`
+
+* Alternatively you can also use:
+
+   `ctest`
 
 The tests will verify the functionality of the message broker client, including message sending and receiving.
 
