@@ -6,13 +6,13 @@ Before building and running this project, you will need the following:
 
 * A C++ compiler that supports C++17 (e.g., GCC, Clang, MSVC)
 
-* CMake (version 3.10 or higher)
+* [CMake](https://cmake.org/) (version 3.10 or higher)
 
-* Apache Qpid Proton C++ library for AMQP messaging
+* [Apache Qpid Proton C++ library](https://qpid.apache.org/proton/index.html) for AMQP messaging
 
-* SQLite3 library for database interactions
+* [SQLite3 library](https://www.sqlite.org/) for database interactions
 
-* Google Test and Google Mock for running tests (optional)
+* [Google Test](https://github.com/google/googletest) and [Google Mock](https://github.com/google/googletest/tree/main/googlemock) for running tests (optional)
 
 # Building the Project
 
@@ -44,6 +44,8 @@ After building the project, you can run the client executable from the build dir
    `./MessageBrokerClient`
 
 Ensure that your AMQP message broker is running and accessible at the configured URL and address.
+
+For this example [Apache ActiveMQ (version 5.18.3)](https://activemq.apache.org/components/classic/download/) was used as the message broker.
 
 # Running Tests
 
