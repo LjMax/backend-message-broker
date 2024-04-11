@@ -20,20 +20,21 @@ To build the project, follow these steps:
 
 1. Clone the repository:
    
-   `git clone https://github.com/yourusername/message-broker-client.git
-cd message-broker-client`
+   `git clone https://github.com/yourusername/message-broker-client.git`
+   
+   `cd message-broker-client`
 
-2. Create a build directory and navigate to it:
+3. Create a build directory and navigate to it:
 
    `mkdir build`
    
    `cd build`
 
-3. Run CMake to configure the build and generate the Makefiles:
+4. Run CMake to configure the build and generate the Makefiles:
 
    `cmake ..`
 
-4. Build the project:
+5. Build the project:
 
    `make`
 
