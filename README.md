@@ -46,6 +46,18 @@ After building the project, you can run the client executable from the build dir
 
 Ensure that your AMQP message broker is running and accessible at the configured URL and address.
 
+## Optional command line parameters
+
+You can add optional command line parameters such as url, queue name, db name and message, for example:
+
+`./MessageBroker amqp://localhost:5672 testQueue messages.db 'Test Message'`
+
+First parameter is the URL, second one is neme of queue, third is database filename and last one is message.
+
+You can set any number of parameters you wish in this order 
+
+If some or none of the parameters is set, the default ones will be used from this example command.
+
 For this example [Apache ActiveMQ (version 5.18.3)](https://activemq.apache.org/components/classic/download/) was used as the message broker.
 
 # Running Tests
