@@ -5,22 +5,21 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include)
 
+add_executable(MessageBroker main.cpp
+                             src/MessageBrokerClient.cpp
+                             src/MessageDatabase.cpp
+                             src/MessageHandler.cpp)
+
+# Link with Qpid Proton C++ library and SQLite library
+target_link_libraries(MessageBroker qpid-proton-cpp sqlite3 pthread)
+
 # Check if Google Test and Google Mock are available
 find_package(GTest QUIET)
 
 if(GTest_FOUND)
     # Add Google Test
     enable_testing()
-    find_package(GTest REQUIRED)
     include_directories(${GTEST_INCLUDE_DIRS})
-
-    add_executable(MessageBroker main.cpp
-                                 src/MessageBrokerClient.cpp
-                                 src/MessageDatabase.cpp
-                                 src/MessageHandler.cpp)
-
-    # Link with Qpid Proton C++ library and SQLite library
-    target_link_libraries(MessageBroker qpid-proton-cpp sqlite3 pthread)
 
     # Add test
     add_executable(MessageBrokerClientTest tests/MessageBrokerClientTest.cpp
