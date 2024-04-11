@@ -42,7 +42,7 @@ To build the project, follow these steps:
 
 After building the project, you can run the client executable from the build directory:
 
-   `./MessageBrokerClient`
+   `./MessageBroker`
 
 Ensure that your AMQP message broker is running and accessible at the configured URL and address.
 
