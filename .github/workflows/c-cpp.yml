@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y cmake g++ libqpid-proton11-dev libsqlite3-dev
+        sudo apt-get install -y cmake g++ libqpid-proton-cpp12-dev libsqlite3-dev
 
     - name: Build
       run: |
