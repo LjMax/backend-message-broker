@@ -26,6 +26,17 @@ jobs:
         make
         sudo make install    
 
+    - name: Setup Java for ActiveMQ
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11'  # ActiveMQ 5.x requires Java 8 or later
+
+    - name: Download and Run ActiveMQ
+      run: |
+        wget https://archive.apache.org/dist/activemq/5.18.3/apache-activemq-5.18.3-bin.tar.gz
+        tar xzf apache-activemq-5.18.3-bin.tar.gz
+        apache-activemq-5.18.3/bin/activemq start    
+
     - name: Build
       run: |
         mkdir build
